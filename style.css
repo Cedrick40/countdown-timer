@@ -1,0 +1,98 @@
+:root {
+  --bg: #0d1b2a;
+  --panel: #14263b;
+  --line: #27425f;
+  --text: #f1f5f9;
+  --muted: #9fb3c8;
+  --accent: #ffb703;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: "Space Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: radial-gradient(circle at 50% 0%, #1b3556 0%, var(--bg) 60%);
+  color: var(--text);
+}
+
+.wrap {
+  width: 100%;
+  max-width: 820px;
+  padding: 2rem 1.25rem;
+  text-align: center;
+}
+
+.kicker {
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  font-size: .85rem;
+  color: var(--accent);
+}
+
+h1 {
+  font-size: clamp(2rem, 6vw, 3.4rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-top: .5rem;
+}
+
+.target { color: var(--muted); margin-top: .75rem; }
+
+.timer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.unit {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 1.5rem .5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .4rem;
+  transition: transform .2s ease, border-color .2s ease;
+}
+.unit:hover { transform: translateY(-4px); border-color: var(--accent); }
+
+.num {
+  font-size: clamp(2.2rem, 8vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;   /* digits keep equal width so nothing jiggles */
+}
+
+.label {
+  text-transform: uppercase;
+  letter-spacing: .15em;
+  font-size: .75rem;
+  color: var(--muted);
+}
+
+.message {
+  margin-top: 2rem;
+  padding: 1rem 1.25rem;
+  border: 2px solid var(--accent);
+  border-radius: 12px;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--accent);
+}
+.message[hidden] { display: none; }
+
+body.finished .num { color: var(--accent); }
+
+@media (max-width: 560px) {
+  .timer { grid-template-columns: repeat(2, 1fr); }
+  .unit { padding: 1.25rem .5rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Countdown Timer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <p class="kicker">Counting down to</p>
+    <h1 id="event-name">New Year 2027</h1>
+    <p class="target" id="target-date"></p>
+
+    <section class="timer" id="timer" role="timer" aria-label="Time remaining">
+      <div class="unit"><span class="num" id="days">00</span><span class="label">Days</span></div>
+      <div class="unit"><span class="num" id="hours">00</span><span class="label">Hours</span></div>
+      <div class="unit"><span class="num" id="minutes">00</span><span class="label">Minutes</span></div>
+      <div class="unit"><span class="num" id="seconds">00</span><span class="label">Seconds</span></div>
+    </section>
+
+    <p class="message" id="message" role="status" aria-live="polite" hidden></p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
