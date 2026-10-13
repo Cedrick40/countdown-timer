@@ -2,7 +2,7 @@
 
 A static, responsive countdown timer that counts down to a specific date and shows the days, hours, minutes and seconds remaining. Built for Task 13 (Countdown Timer) of my Web Development internship.
 
-**Live page:** https://cedrick40.github.io/countdown-timer/ *(replace with your actual link after deploying)*
+**Live page:** https://cedrick40.github.io/countdown-timer/
 
 ## About the project
 The page counts down to New Year 2027 and updates every second. When the countdown reaches zero, it stops and shows a message. The target date, event name and final message can all be changed at the top of `script.js`.
